@@ -1,6 +1,6 @@
 function Header(props) {
   const handleClickNew = () => {
-    props.detectClickNewBtn();
+    props.detectClickNewBtn(1, 0);
   };
 
   return (

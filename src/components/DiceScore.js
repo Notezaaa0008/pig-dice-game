@@ -1,9 +1,14 @@
-import { useState } from 'react';
+import { useState, useEffect } from "react";
 
 function DiceScore(props) {
   const [diceScore, setDiceScore] = useState(1);
   const [roundScore, setRoundScore] = useState(0);
   // const { currentPlayer, setCurrentPlayer } = props;
+
+  useEffect(() => {
+    setDiceScore(1);
+    setRoundScore(0);
+  }, [props.restart]);
 
   const handleClickRoll = () => {
     const newDiceScore = Math.floor(Math.random() * 6) + 1;
